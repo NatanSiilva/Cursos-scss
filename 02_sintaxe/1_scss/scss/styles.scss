@@ -1,0 +1,15 @@
+$bg-color: #eee;
+$title: #ccc;
+$main-color: #333;
+
+.container {
+   background: $bg-color;
+   padding: 20px;
+
+   #title {
+      background-color: $title;
+      color: $main-color;
+      text-align: center;
+      padding: 10px;
+   }
+}
