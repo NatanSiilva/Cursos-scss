@@ -1,0 +1,28 @@
+@import 'variables'
+
+h1
+   color: $text-color
+   border: $border
+
+p
+   color: $text-color
+   border: $border
+   margin: #{$mx + 10px}
+
+a
+   color: $text-color
+
+div
+   p
+      $text-color: yellow
+      $border: 4px solid green
+      border: $border
+      background-color: $bg-color
+      color: $text-color
+
+   span
+      color: $text-color
+      border: $border
+      background-color: $bg-color
+
+//Shandowing - Variaveis com o mesmo nome

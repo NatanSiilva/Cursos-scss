@@ -1,0 +1,84 @@
+@charset 'UTF-8'
+
+@import 'variables'
+@import 'button'
+@import 'mixins'
+@import 'modules'
+@import 'functions'
+
+
+body
+   margin: 20px
+
+.p-esp
+   @include especial
+
+h2
+   @include especial
+   @include green
+
+.esp-menor
+   @include espacamento(10px, 10px)
+   @include custom-border(dotted, red, 10px)
+   @include color
+   @extend %font-parttern
+
+.esp-medio
+   @include espacamento(15px, 15px)
+   @include custom-border(dotted, blue)
+   @include color($background: red, $font: blue)
+   @extend %font-parttern
+
+.esp-maior
+   @include espacamento(25px, 25px)
+   border: 1px solid green
+   @include custom-border(dotted, green, 5px)
+   @extend %font-parttern
+
+.container-menor
+   width: 100px * $medida
+   border: custom-border-fn(100)
+
+.container-maior
+   border: custom-border-fn(485)
+   width: 25rem * $medida
+
+.font-pequena
+   font-size: 10px
+   color: text-color(10)
+   border: custom-border-fn(50)
+
+.font-grande
+   font-size: 50px
+   color: text-color(25)
+
+.teste-1
+   width: custom-width-fn()
+   background: red
+
+.teste-2
+   width: custom-width-fn($width: 1000px)
+   background: purple
+
+.teste-3
+   width: custom-width-fn($division: 507)
+   background: purple
+
+
+$fonts: 40px, 60px, 100px
+
+@each $fonts in $fonts
+   .title-#{$fonts}
+      font-size: $fonts
+      line-height: $fonts * 1.2    
+
+
+@for $i from 1 through 10
+   .p-#{$i}
+      @if $i == 1
+         color: lightblue
+      @else if $i == 2
+         color: lightgreen
+      @else if $i == 3
+         color: lightpink
+      background: black

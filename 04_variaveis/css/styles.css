@@ -1,0 +1,27 @@
+h1 {
+  color: red;
+  border: 3px solid red;
+}
+
+p {
+  color: red;
+  border: 3px solid red;
+  margin: 20px;
+}
+
+a {
+  color: red;
+}
+
+div p {
+  border: 4px solid green;
+  background-color: blue;
+  color: yellow;
+}
+div span {
+  color: red;
+  border: 3px solid red;
+  background-color: blue;
+}
+
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,34 @@
+@function text-color($size)
+   $color: #000
+
+   @if $size > 10
+      $color: red
+   @else
+      $color: blue
+
+   @return $color
+
+// Funções com argumentos opcionais
+
+@function custom-border-fn($variation: 1)
+   $border: none
+   $var: 3
+
+   @if $variation > $var
+      // @error 'Insira o número maior que 3'
+      @warn  'Insira o número maior que #{$var}'
+
+   @if $variation == 1
+      $border: 1px solid red
+   @else if $variation == 2
+      $border: 2px solid green
+   @else
+      $border: 3px solid gold
+
+   @return $border
+
+@function custom-width-fn($width: 200px, $division: 2)
+
+   @debug "O valor da divisão é:#{$width / $division}"
+
+   @return $width / $division
